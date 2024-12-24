@@ -1,0 +1,463 @@
+/* Import the Cormorant Garamond font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond font */
+  color: #333;
+  line-height: 1.6;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.top-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.top-nav ul li {
+  margin: 0 15px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond to navigation links */
+  padding: 5px 10px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #00bcd4;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position the dot below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px; /* Width of the dot */
+  height: 6px; /* Height of the dot */
+  background-color: #00bcd4; /* Blue color for the dot */
+  border-radius: 50%; /* Make it circular */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin-top: 70px;
+  box-sizing: border-box;
+}
+
+.video-container {
+  width: 70%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  margin: auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Projects Section */
+#projects {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.work__filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.work__item {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.work__item:hover,
+.work__item.active-work {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.work__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.work__card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.work__img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.work__button {
+  cursor: pointer;
+  color: #00bcd4;
+  font-weight: bold;
+  margin: 10px 0;
+  display: block;
+  text-decoration: underline;
+}
+
+/* Portfolio Popup */
+.portfolio__popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__popup.open {
+  display: flex;
+}
+
+.portfolio__popup-inner {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+}
+
+.portfolio__popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.portfolio__popup-close:hover {
+  color: #00bcd4;
+}
+
+.pp__thumbnail img {
+  max-width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+/* Slideshow Styles */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.slideshow__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slideshow__img.active {
+  opacity: 1;
+}
+
+/* Video Styles */
+.video-container {
+  margin-top: 20px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond to sections */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond to form fields */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  background-color: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #008c9e;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif; /* Apply Cormorant Garamond to footer */
+}
+
+.carousel-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%; /* Adjust size as needed */
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex; /* Ensure it's displayed */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.carousel-popup.hidden {
+  display: none; /* Hidden by default */
+}
+
+.carousel-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  z-index: 1001;
+  transition: color 0.3s ease;
+}
+
+.carousel-popup__close:hover {
+  color: #00bcd4;
+}
+
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.carousel__content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel__item {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel__item.active {
+  display: block;
+}
+
+.carousel__arrow {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1000;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.carousel__arrow:hover {
+  background: #00bcd4;
+}
+
+.carousel__arrow--left {
+  position: absolute;
+  left: 10px;
+}
+
+.carousel__arrow--right {
+  position: absolute;
+  right: 10px;
+}
+
+/* Overlay Background */
+.carousel-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Dark background */
+  z-index: 1000;
+  display: none; /* Hidden by default */
+}
+
+.carousel-popup-overlay.active {
+  display: block; /* Show overlay when popup is active */
+}
+
+/* Carousel Popup */
+.carousel-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  background-color: #fff; /* Keep the popup content white */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* Increased spacing between image and text */
+}
+
+.about-portrait {
+  flex: 1;
+  max-width: 300px; /* Set the maximum size of the image */
+}
+
+.about-portrait img {
+  width: 100%;
+  border-radius: 50%; /* Circular portrait */
+  border: 2px solid #000; /* Black border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7), /* Black glow */
+              0 0 20px rgba(0, 0, 0, 0.5);    /* Outer glow */
+}
+
+.about-text {
+  flex: 2;
+  max-width: 600px; /* Adjust as needed */
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-text p {
+  margin: 0;
+}

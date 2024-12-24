@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rayyan Irfan Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo">
+      <a href="#" onclick="scrollToTop(); return false;">
+        <img src="black png-02.png" alt="Rayyan Irfan Logo">
+      </a>
+    </div>
+    <nav class="top-nav">
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="Original.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <!-- Portrait Image -->
+      <div class="about-portrait">
+        <img src="assets/20241209.jpg" alt="Rayyan Irfan Portrait" />
+      </div>
+      <!-- About Me Text -->
+      <div class="about-text">
+        <p>
+          Hey! My name is Rayyan Irfan, an innovative individual currently pursuing a Bachelor of Arts in Digital Media at York University's Lassonde School of Engineering. My academic journey has been a rewarding exploration of interactive digital media, multimedia asset creation, advanced object-oriented programming, and various other facets of the digital media landscape. Beyond my technical expertise, I am a passionate individual who seamlessly combines technical acumen with creative expression. My academic pursuits, technical skills, and diverse professional experiences have molded me into a versatile professional, committed to achieving creative excellence and fostering meaningful community engagement.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="services">
+    <h2>Services</h2>
+    <p>Offering creative digital solutions including graphic design, animations, and interactive media.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+  
+    <!-- Filter Buttons -->
+    <div class="work__filters">
+      <span class="work__item active-work" data-filter="all">All</span>
+      <span class="work__item" data-filter="design">Design</span>
+      <span class="work__item" data-filter="games">Game</span>
+      <span class="work__item" data-filter="animations">Animation</span>
+      <span class="work__item" data-filter="photography">Photography</span> <!-- New Filter -->
+      <span class="work__item" data-filter="videography">Videography</span> <!-- New Filter -->
+    </div>
+    
+    <!-- Projects Container -->
+    <div class="work__container container grid">
+      <!-- Design Projects -->
+
+      <div class="work__card mix design">
+        <!-- Thumbnail -->
+        <img src="black png-02.png" alt="Mansiyah Thumbnail" class="work__img">
+        <h3 class="work__title">Mansiyah</h3>
+        <!-- View Store Link -->
+        <a href="https://www.mansiyah.co/" target="_blank" class="work__link">View Store</a>
+        <span class="work__button">View Details</span>
+        <!-- Pop-up Carousel -->
+        <div class="carousel-popup hidden">
+          <button class="carousel-popup__close">&times;</button>
+          <div class="carousel">
+            <!-- Carousel Arrows -->
+            <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+            <div class="carousel__content">
+              <!-- Images -->
+              <img src="assets/Mansiyah/FILM.png" alt="FILM" class="carousel__item">
+              <img src="assets/Mansiyah/64849B/8.png" alt="Image 1" class="carousel__item">
+              <img src="assets/Mansiyah/64849B/9.png" alt="Image 2" class="carousel__item">
+              <img src="assets/Mansiyah/SABR/1.png" alt="Image 3" class="carousel__item">
+              <img src="assets/Mansiyah/SABR/2.png" alt="Image 4" class="carousel__item">
+              <img src="assets/Mansiyah/SABR/3.png" alt="Image 5" class="carousel__item">
+              <img src="assets/Mansiyah/SABR/4.png" alt="Image 6" class="carousel__item">
+            </div>
+            <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="work__card mix design">
+        <img src="assets/THIRD-REASONS/Third-Reasons---Website-2.png" alt="Third Reasons Thumbnail" class="work__img">
+        <h3 class="work__title">Third Reasons</h3>
+        <span class="work__button">View Details</span>
+      
+        <!-- Pop-up Carousel -->
+        <div class="carousel-popup hidden">
+          <button class="carousel-popup__close">&times;</button>
+          <div class="carousel">
+            <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+            <div class="carousel__content">
+              <!-- Video -->
+              <video controls loop class="carousel__item">
+                <source src="assets/THIRD-REASONS/WEBSITE_TR_IG_2023-10-20.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- Images -->
+              <img src="assets/THIRD-REASONS/Third-Reasons---Website-2.png" alt="Image 1" class="carousel__item">
+              <img src="assets/THIRD-REASONS/Third-Reasons---Website-5.png" alt="Image 2" class="carousel__item">
+              <img src="assets/THIRD-REASONS/Third-Reasons-Website-3.png" alt="Image 3" class="carousel__item">
+            </div>
+            <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-popup-overlay"></div>
+                    
+<div class="work__card mix design">
+  <!-- Thumbnail -->
+  <img src="assets/AESOP/Aesop-2.png" alt="Aesop Thumbnail" class="work__img">
+  <h3 class="work__title">Aesop</h3>
+  <span class="work__button">View Details</span>
+  <!-- Pop-up Carousel -->
+  <div class="carousel-popup hidden">
+    <button class="carousel-popup__close">&times;</button>
+    <div class="carousel">
+      <!-- Carousel Arrows -->
+      <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+      <div class="carousel__content">
+        <!-- Images -->
+        <img src="assets/AESOP/Aesop-2.png" alt="Image 1" class="carousel__item">
+        <img src="assets/AESOP/Aesop-3.png" alt="Image 2" class="carousel__item">
+        <img src="assets/AESOP/Aesop-4.png" alt="Image 3" class="carousel__item">
+        <img src="assets/AESOP/Aesop-5.png" alt="Image 4" class="carousel__item">
+      </div>
+      <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+    </div>
+  </div>
+</div>
+  
+      <!-- Game Projects -->
+      <div class="work__card mix games">
+        <!-- Thumbnail -->
+        <img src="assets/Alien Dash/Alien Dash.png" alt="Alien Dash Thumbnail" class="work__img">
+        <h3 class="work__title">Alien Dash</h3>
+        <!-- Updated Project Link -->
+        <a href="https://editor.p5js.org/irfan02/full/DhadNQfW7" target="_blank" class="work__link">Play Alien Dash</a>
+        <span class="work__button">View Details</span>
+        <!-- Pop-up Carousel -->
+        <div class="carousel-popup hidden">
+          <button class="carousel-popup__close">&times;</button>
+          <div class="carousel">
+            <!-- Carousel Arrows -->
+            <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+            <div class="carousel__content">
+              <!-- Documentation Video -->
+              <video controls loop class="carousel__item">
+                <source src="assets/Alien Dash/Documentation Video.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- Images -->
+              <img src="assets/Alien Dash/Alien Dash.png" alt="Alien Dash Screenshot 1" class="carousel__item">
+            </div>
+            <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Animation Projects -->
+      <div class="work__card mix animations">
+        <!-- Thumbnail -->
+        <img src="assets/Dynamic Pulse/download.png" alt="Dynamic Pulse Thumbnail" class="work__img">
+        <h3 class="work__title">Dynamic Pulse</h3>
+        <!-- Project Link -->
+        <a href="https://editor.p5js.org/irfan02/full/lN5mvkgRX" target="_blank" class="work__link">View Animation</a>
+        <span class="work__button">View Details</span>
+        <!-- Pop-up Carousel -->
+        <div class="carousel-popup hidden">
+          <button class="carousel-popup__close">&times;</button>
+          <div class="carousel">
+            <!-- Carousel Arrows -->
+            <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+            <div class="carousel__content">
+              <!-- Image -->
+              <img src="assets/Dynamic Pulse/download.png" alt="Dynamic Pulse Image" class="carousel__item">
+            </div>
+            <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+          </div>
+        </div>
+      </div>
+        
+      <div class="work__card mix animations">
+        <!-- Thumbnail -->
+        <img src="assets/Abstract Doodle/0101.png" alt="Abstract Doodle Thumbnail" class="work__img">
+        <h3 class="work__title">Abstract Doodle</h3>
+        <span class="work__button">View Details</span>
+        <!-- Pop-up Carousel -->
+        <div class="carousel-popup hidden">
+          <button class="carousel-popup__close">&times;</button>
+          <div class="carousel">
+            <!-- Carousel Arrows -->
+            <button class="carousel__arrow carousel__arrow--left">&lt;</button>
+            <div class="carousel__content">
+              <!-- Video -->
+              <video controls loop class="carousel__item">
+                <source src="assets/Abstract Doodle/0101(1).mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <button class="carousel__arrow carousel__arrow--right">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Pop-up Details -->
+    <div class="portfolio__popup">
+      <div class="portfolio__popup-inner">
+        <div class="portfolio__popup-close">&times;</div>
+        <div class="pp__thumbnail">
+          <img src="" alt="Project Thumbnail">
+        </div>
+        <h3 class="portfolio__popup-title"></h3>
+        <p class="portfolio__popup-description"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>
+      I have a strong technical toolkit that underscores my passion for digital creation and design. Proficient in languages such as Java, Python, HTML/CSS, JavaScript, and adept in software tools such as the Adobe Creative Suite, I am well-equipped to tackle a wide range of digital projects. Furthermore, my expertise extends to 3D modeling using Blender and Maya, as well as interactive media development through platforms like Unity and Unreal Engine.
+    </p>
+    </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Rayyan Irfan</p>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
